@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 42543ca7869d2b443b8883cae22fd298
+guid: 3cff043e3540eb6459ad5318cfe8ca8e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6934574360493383026
-    second: LevelCompletedScreen_0
+      213: -7762908267683683427
+    second: FooterSprites_0
+  - first:
+      213: 4131289052685355601
+    second: FooterSprites_1
+  - first:
+      213: -3221273994799822951
+    second: FooterSprites_2
+  - first:
+      213: -4322447564635710316
+    second: FooterSprites_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,23 +135,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LevelCompletedScreen_0
+      name: FooterSprites_Home
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2484
-        height: 5376
+        x: 70
+        y: 579
+        width: 372
+        height: 377
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e82a24e2c5173cf90800000000000000
-      internalID: -6934574360493383026
+      spriteID: d9365c86f0c944490800000000000000
+      internalID: -7762908267683683427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FooterSprites_Shop
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 591
+        width: 312
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a45c14189455930800000000000000
+      internalID: 4131289052685355601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FooterSprites_Map
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 72
+        width: 315
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997c0c76e5cbb43d0800000000000000
+      internalID: -3221273994799822951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FooterSprites_Locked
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 137
+        width: 184
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49cd2ad57d49304c0800000000000000
+      internalID: -4322447564635710316
       vertices: []
       indices: 
       edges: []
@@ -151,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0847536a4ecefa448b4ce759a710d014
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LevelCompletedScreen_0: -6934574360493383026
+      FooterSprites_Home: -7762908267683683427
+      FooterSprites_Locked: -4322447564635710316
+      FooterSprites_Map: -3221273994799822951
+      FooterSprites_Shop: 4131289052685355601
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
