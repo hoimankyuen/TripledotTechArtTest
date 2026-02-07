@@ -7,12 +7,15 @@ public class SafeAreaContainer : MonoBehaviour
     private RectTransform _rectTransform;
     
     private ScreenOrientation _lastOrientation;
+
+    private void Awake()
+    {
+        _canvas = GetComponentInParent<Canvas>();
+        _rectTransform = GetComponent<RectTransform>(); 
+    }
     
     private void Start()
     {
-        _canvas = GetComponentInParent<Canvas>();
-        _rectTransform = GetComponent<RectTransform>();
-
         _rectTransform.anchorMin = Vector2.zero;
         _rectTransform.anchorMax = Vector2.one;
         _rectTransform.pivot = Vector2.one / 2f;

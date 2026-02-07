@@ -14,7 +14,7 @@ public class BottomBarView : MonoBehaviour
     }
 
     [Header("Components")] 
-    [SerializeField] private Animator animator;
+    [SerializeField] private Hider hider;
     [SerializeField] private Transform buttonContainer;
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private BottomBarButtonFrame buttonFrame;
@@ -22,8 +22,6 @@ public class BottomBarView : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private List<ButtonInfo> buttonInfos;
     [SerializeField] private int defaultSelectedButtonIndex;
-    
-    private static readonly int ShownAnimationKey = Animator.StringToHash("Shown");
     
     private readonly List<BottomBarButton> _buttons = new List<BottomBarButton>();
     private BottomBarButton _selectedButton;
@@ -69,6 +67,6 @@ public class BottomBarView : MonoBehaviour
 
     public void Show(bool show)
     {
-        animator.SetBool(ShownAnimationKey, show);
+        hider.Show(show);
     }
 }
