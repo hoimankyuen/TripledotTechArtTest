@@ -330,7 +330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &505271190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -480,7 +480,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4170885144870174040, guid: d0915acd6aea52e448aa590bb627f248, type: 3}
       propertyPath: m_Name
-      value: PopupSettingsDivider (3)
+      value: PopupSettingsDivider
       objectReference: {fileID: 0}
     - target: {fileID: 8536958750784718657, guid: d0915acd6aea52e448aa590bb627f248, type: 3}
       propertyPath: m_Pivot.x
@@ -1337,7 +1337,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4170885144870174040, guid: d0915acd6aea52e448aa590bb627f248, type: 3}
       propertyPath: m_Name
-      value: PopupSettingsDivider (2)
+      value: PopupSettingsDivider
       objectReference: {fileID: 0}
     - target: {fileID: 8536958750784718657, guid: d0915acd6aea52e448aa590bb627f248, type: 3}
       propertyPath: m_Pivot.x
@@ -1841,7 +1841,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4170885144870174040, guid: d0915acd6aea52e448aa590bb627f248, type: 3}
       propertyPath: m_Name
-      value: PopupSettingsDivider (1)
+      value: PopupSettingsDivider
       objectReference: {fileID: 0}
     - target: {fileID: 8536958750784718657, guid: d0915acd6aea52e448aa590bb627f248, type: 3}
       propertyPath: m_Pivot.x
@@ -3472,9 +3472,9 @@ RectTransform:
   - {fileID: 1462583448}
   m_Father: {fileID: 505271190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1242.2008, y: -2487.5652}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830880707
@@ -3615,9 +3615,9 @@ RectTransform:
   - {fileID: 667964533}
   m_Father: {fileID: 505271190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1242.2008, y: -2887.5652}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952251501
@@ -4799,7 +4799,7 @@ GameObject:
   - component: {fileID: 3112711326484300418}
   - component: {fileID: 1365867388173886340}
   m_Layer: 5
-  m_Name: PopupSettingsGroup (4)
+  m_Name: PopupSettingsGroup(Language)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
