@@ -14,9 +14,24 @@ public class BottomBarButtonFrame : MonoBehaviour
     
     private Coroutine _chaseAnimation;
     
+    private ScreenOrientation _lastOrientation;
+    
     private void Awake()
     {
         _selfRectTransform = GetComponent<RectTransform>();
+    }
+
+    private void Start()
+    {
+        RefreshTransform();
+    }
+
+    private void LateUpdate()
+    {
+        if (Screen.orientation == _lastOrientation)
+            return;
+
+        RefreshTransform();
     }
     
     public void SetTarget(BottomBarButton target)
@@ -46,11 +61,33 @@ public class BottomBarButtonFrame : MonoBehaviour
                 float interpolate = (Time.time - startTime) / chaseDuration;
                 SetXs(_selfRectTransform, 
                     Mathf.LerpUnclamped(startXMin, targetXMin, direction > 0 ? trailingCurve.Evaluate(interpolate) : chasingCurve.Evaluate(interpolate)),
-                    Mathf.LerpUnclamped(startXMax, targetXMax, direction > 0 ? chasingCurve.Evaluate(interpolate) : trailingCurve.Evaluate(interpolate)));
+                    Mathf.LerpUnclamped(startXMax, targetXMax, direction < 0 ? trailingCurve.Evaluate(interpolate) : chasingCurve.Evaluate(interpolate)));
                 yield return null;
             }
             SetXs(_selfRectTransform, GetXMin(_targetRectTransform),  GetXMax(_targetRectTransform));
         }
+
+        _chaseAnimation = null;
+    }
+
+    private void RefreshTransform()
+    {
+        StartCoroutine(DelayedRefreshTransform());
+    }
+    
+    private IEnumerator DelayedRefreshTransform()
+    {
+        // wait for layout group to refresh by delaying a single frame
+        yield return null;
+        
+        if (_chaseAnimation != null)
+            yield break;
+
+        if (_targetRectTransform != null)
+        {
+            SetXs(_selfRectTransform, GetXMin(_targetRectTransform),  GetXMax(_targetRectTransform));
+        }
+        _lastOrientation = Screen.orientation;
     }
 
     private float GetXCentre(RectTransform rectTransform)

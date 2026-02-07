@@ -20,6 +20,7 @@ public class BottomBarView : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private List<ButtonInfo> buttonInfos;
+    [SerializeField] private int defaultSelectedButtonIndex;
     
     private readonly List<BottomBarButton> _buttons = new List<BottomBarButton>();
     private BottomBarButton _selectedButton;
@@ -27,6 +28,11 @@ public class BottomBarView : MonoBehaviour
     private void Awake()
     {
         SetupButtons();
+    }
+
+    private void Start()
+    {
+        SelectButton(_buttons[Mathf.Clamp(defaultSelectedButtonIndex, 0, buttonInfos.Count - 1)]);
     }
     
     private void SetupButtons()

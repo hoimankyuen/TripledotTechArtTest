@@ -12,6 +12,7 @@ public class BottomBarButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] labelTexts;
         
     private static readonly int SelectedAnimationKey = Animator.StringToHash("Selected");
+    private static readonly int PressedAnimationKey = Animator.StringToHash("Pressed");
     
     public RectTransform RectTransform { get; private set; }
     public BottomBarView.ButtonInfo ButtonInfo { get; private set; }
@@ -40,6 +41,8 @@ public class BottomBarButton : MonoBehaviour
 
     public void Select()
     {
+        animator.SetTrigger(PressedAnimationKey);
+        
         if (_locked)
             return;
 
