@@ -9,7 +9,7 @@ public class BottomBarButton : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Image unlockedImage;
     [SerializeField] private Image lockedImage;
-    [SerializeField] private TextMeshProUGUI[] labelTexts;
+    [SerializeField] private OutlinedText text;
         
     private static readonly int SelectedAnimationKey = Animator.StringToHash("Selected");
     private static readonly int PressedAnimationKey = Animator.StringToHash("Pressed");
@@ -33,10 +33,7 @@ public class BottomBarButton : MonoBehaviour
         unlockedImage.sprite = buttonInfo.Icon;
         unlockedImage.gameObject.SetActive(!buttonInfo.Locked);
         lockedImage.gameObject.SetActive(buttonInfo.Locked);
-        foreach (TextMeshProUGUI labelText in labelTexts)
-        {
-            labelText.text = buttonInfo.Label;
-        }
+        text.SetText(buttonInfo.Label);
     }
 
     public void Select()
