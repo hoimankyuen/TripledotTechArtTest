@@ -1,4 +1,4 @@
-﻿Shader "Custom/UIBlur"
+﻿Shader "Custom/Unlit/UIBlur"
 {
     Properties
     {
@@ -38,7 +38,7 @@
           
             struct v2f
             {
-                float4 vertex : POSITION;
+                float4 vertex : SV_POSITION;
                 float4 uv : TEXCOORD0;
                 float4 color : COLOR0;
             };
@@ -52,7 +52,7 @@
                 #else
                 float scale = 1.0;
                 #endif
-                o.uv.xy = (float2(o.vertex.x, o.vertex.y*scale) + o.vertex.w) * 0.5;
+                o.uv.xy = (float2(o.vertex.x, o.vertex.y * scale) + o.vertex.w) * 0.5;
                 o.uv.zw = o.vertex.zw;
                 o.color = v.color;
                 return o;
@@ -117,7 +117,7 @@
                 #else
                 float scale = 1.0;
                 #endif
-                o.uv.xy = (float2(o.vertex.x, o.vertex.y*scale) + o.vertex.w) * 0.5;
+                o.uv.xy = (float2(o.vertex.x, o.vertex.y * scale) + o.vertex.w) * 0.5;
                 o.uv.zw = o.vertex.zw;
                 o.color = v.color;
                 return o;
