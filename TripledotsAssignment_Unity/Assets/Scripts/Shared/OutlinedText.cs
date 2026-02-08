@@ -1,16 +1,31 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class OutlinedText : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] private TextMeshProUGUI[] texts;
+    [SerializeField] private List<TextMeshProUGUI> textMeshProUGUIs;
 
-    public void SetText(string content)
+    [Header("Settings")]
+    [SerializeField] private string text;
+
+    private void OnValidate()
     {
-        foreach (TextMeshProUGUI text in texts)
+        ApplyTextToComponents();
+    }
+    
+    public void SetText(string newText)
+    {
+        text = newText;
+        ApplyTextToComponents();
+    }
+
+    private void ApplyTextToComponents()
+    {
+        foreach (TextMeshProUGUI textMeshProUGUI in textMeshProUGUIs)
         {
-            text.text = content;
+            textMeshProUGUI.text = text;
         }
     }
 }

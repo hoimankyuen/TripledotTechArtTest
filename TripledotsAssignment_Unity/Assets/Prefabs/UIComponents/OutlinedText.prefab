@@ -51,9 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b10e7f1ff092764e8fb37a0e769ac0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlinedText
-  texts:
+  textMeshProUGUIs:
   - {fileID: 932348602151191189}
   - {fileID: 4016594270989037486}
+  text: Text
 --- !u!222 &8050751780537219234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -82,7 +83,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Home
+  m_text: Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e16519d797acd240bab7a9cb198d90a, type: 2}
   m_sharedMaterial: {fileID: -1799768678278697697, guid: 1e16519d797acd240bab7a9cb198d90a, type: 2}
@@ -109,7 +110,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 103.3
+  m_fontSize: 124
   m_fontSizeBase: 124
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -219,7 +220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Home
+  m_text: Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 486ab3817a06a934ca86cf79c755966f, type: 2}
   m_sharedMaterial: {fileID: -1799768678278697697, guid: 486ab3817a06a934ca86cf79c755966f, type: 2}
@@ -246,7 +247,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 103.3
+  m_fontSize: 124
   m_fontSizeBase: 124
   m_fontWeight: 400
   m_enableAutoSizing: 1
