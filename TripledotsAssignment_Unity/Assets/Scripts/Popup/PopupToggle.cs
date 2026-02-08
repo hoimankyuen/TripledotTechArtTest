@@ -15,6 +15,11 @@ public class PopupToggle : MonoBehaviour
         OnToggleValueChanged(toggle.isOn);
     }
 
+    private void OnEnable()
+    {
+        OnToggleValueChanged(toggle.isOn);
+    }
+    
     private void OnDestroy()
     {
         if (toggle != null)

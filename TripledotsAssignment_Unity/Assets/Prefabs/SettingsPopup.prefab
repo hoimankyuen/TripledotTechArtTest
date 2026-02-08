@@ -3597,6 +3597,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5162817496890563515, guid: cadbb7ab45467bd4abfccc6bf0e6fe65, type: 3}
+      propertyPath: m_text
+      value: Settings
+      objectReference: {fileID: 0}
     - target: {fileID: 5201550760211914416, guid: cadbb7ab45467bd4abfccc6bf0e6fe65, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3797,6 +3801,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9001448811367970432, guid: cadbb7ab45467bd4abfccc6bf0e6fe65, type: 3}
+      propertyPath: m_text
+      value: Settings
+      objectReference: {fileID: 0}
     - target: {fileID: 9005270438404537934, guid: cadbb7ab45467bd4abfccc6bf0e6fe65, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3866,12 +3874,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915b782471aeb4d47b17f0a91dffe2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsPopup
-  hider: {fileID: 0}
+  hider: {fileID: 6393972743089949798}
 --- !u!224 &4858185330950223574 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1194752773044370651, guid: cadbb7ab45467bd4abfccc6bf0e6fe65, type: 3}
   m_PrefabInstance: {fileID: 6052592161557694989}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6393972743089949798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 812007848297743979, guid: cadbb7ab45467bd4abfccc6bf0e6fe65, type: 3}
+  m_PrefabInstance: {fileID: 6052592161557694989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468084606847117110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784f11564795b65479514ca1d195dfc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hider
 --- !u!224 &6579749388591079564 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 626237522839956097, guid: cadbb7ab45467bd4abfccc6bf0e6fe65, type: 3}

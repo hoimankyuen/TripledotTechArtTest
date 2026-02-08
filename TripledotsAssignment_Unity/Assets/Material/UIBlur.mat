@@ -81,7 +81,7 @@ Material:
     - _BlinkAlphaFrom: 0
     - _BlinkAlphaTo: 1
     - _BlinkSpeed: 1
-    - _BlurRadius: 1.5
+    - _BlurRadius: 3
     - _BumpAmt: 0
     - _BumpScale: 1
     - _Cutoff: 0.5

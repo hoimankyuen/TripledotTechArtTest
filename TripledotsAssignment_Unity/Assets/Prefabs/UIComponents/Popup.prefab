@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 1872693323817036783}
   - component: {fileID: 9034017779258264326}
   - component: {fileID: 66039679426557094}
+  - component: {fileID: 6577233167046994045}
   - component: {fileID: 2551365973013233924}
   m_Layer: 5
   m_Name: Frame
@@ -585,6 +586,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0.05490196, b: 0.16078432, a: 0.16862746}
   m_EffectDistance: {x: 0, y: -25}
   m_UseGraphicAlpha: 1
+--- !u!225 &6577233167046994045
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050865768090748720}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &2551365973013233924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,7 +873,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4012750618355728931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 812007848297743979}
+        m_TargetAssemblyTypeName: Hider, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8196346121787714875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1092,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 932348602151191189, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_text
-      value: Settings
+      value: Title
       objectReference: {fileID: 0}
     - target: {fileID: 932348602151191189, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_fontSize
@@ -1171,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4016594270989037486, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_text
-      value: Settings
+      value: Title
       objectReference: {fileID: 0}
     - target: {fileID: 4016594270989037486, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_fontSize
