@@ -276,14 +276,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.023529412, g: 0.15294118, b: 0.30980393, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8374317233953873422, guid: 26a58f416d9102e418b4ff278515acf2, type: 3}
+  m_Sprite: {fileID: -2416775842401809218, guid: 0e12ae4c4e88d8b4fa94e97d71aed3e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -887,11 +887,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.023529412, g: 0.15294118, b: 0.30980393, a: 1}
+    m_HighlightedColor: {r: 0.023529412, g: 0.15294118, b: 0.30980393, a: 1}
+    m_PressedColor: {r: 0.7607843, g: 0.8666667, b: 1, a: 1}
+    m_SelectedColor: {r: 0.023529412, g: 0.15294118, b: 0.30980393, a: 1}
+    m_DisabledColor: {r: 0.023529412, g: 0.15294118, b: 0.30980393, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

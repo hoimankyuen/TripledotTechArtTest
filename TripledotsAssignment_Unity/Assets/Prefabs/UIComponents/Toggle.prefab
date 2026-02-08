@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 6138405215135652213}
   - component: {fileID: 4285068052480630617}
   m_Layer: 5
-  m_Name: Checkmark
+  m_Name: Knob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -810932723014116779, guid: 26a58f416d9102e418b4ff278515acf2, type: 3}
+  m_Sprite: {fileID: 1335415210, guid: 4a4d3a10e9fbf6d47b3b94ba419320fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8584311648586682354, guid: 26a58f416d9102e418b4ff278515acf2, type: 3}
+  m_Sprite: {fileID: 887199211, guid: 4a4d3a10e9fbf6d47b3b94ba419320fd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

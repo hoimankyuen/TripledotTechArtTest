@@ -265,6 +265,116 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SettingsSprites_Seperator
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 377
+        width: 432
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 0, z: 10, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0a8cb10ad096f4ebe0b09c65c950bc
+      internalID: -1039033878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsSprites_Next
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 356
+        width: 184
+        height: 277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c77e8c79c6777e4dbae3573e1f09ad9
+      internalID: 1518944053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsSprites_Back
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 356
+        width: 184
+        height: 277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbba8fe031047446bc78c8bd047be18
+      internalID: -1158261754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsSprites_ToggleFrame
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 19
+        width: 387
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 110, y: 0, z: 110, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d786618edeff8468722b190d9ee991
+      internalID: 887199211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsSprites_ToggleKnob
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 30
+        width: 199
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff75eeffc3d66443b8b33ae73c893ad
+      internalID: 1335415210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -281,12 +391,21 @@ TextureImporter:
       - key: SpriteEditor.SliceOnImport
         value: False
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      SettingsSprites_0: 735940344
+      SettingsSprites_1: -741681074
+      SettingsSprites_2: -1277568382
+      SettingsSprites_7: 400171634
+      SettingsSprites_Back: -1158261754
       SettingsSprites_LanguageEN: 4426586608018358913
       SettingsSprites_Music: 3701599967680507574
+      SettingsSprites_Next: 1518944053
       SettingsSprites_Notification: 6023658428357795325
+      SettingsSprites_Seperator: -1039033878
       SettingsSprites_Sound: -2743863578720128744
+      SettingsSprites_ToggleFrame: 887199211
+      SettingsSprites_ToggleKnob: 1335415210
       SettingsSprites_Virbration: 1208997016209319097
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

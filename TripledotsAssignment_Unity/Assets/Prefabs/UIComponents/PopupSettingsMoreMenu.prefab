@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4322390693667637928, guid: 26a58f416d9102e418b4ff278515acf2, type: 3}
+  m_Sprite: {fileID: 1518944053, guid: 4a4d3a10e9fbf6d47b3b94ba419320fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -344,7 +344,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 932348602151191189, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_text
-      value: Label
+      value: Text
       objectReference: {fileID: 0}
     - target: {fileID: 932348602151191189, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_fontSize
@@ -476,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4016594270989037486, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_text
-      value: Label
+      value: Text
       objectReference: {fileID: 0}
     - target: {fileID: 4016594270989037486, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_fontSize
