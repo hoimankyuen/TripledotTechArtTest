@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Yorkie-SemiBold SDF_Outline
+  m_Name: Yorkie-SemiBold SDF_OutlineLight
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_FontAsset
   m_Version: 1.1.0
   m_FaceInfo:
@@ -5609,7 +5609,7 @@ Material:
     - _ColorMask: 15
     - _CullMode: 0
     - _Diffuse: 0.5
-    - _FaceDilate: 0.4
+    - _FaceDilate: 0.12
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
     - _GlowInner: 0.05
@@ -5627,8 +5627,8 @@ Material:
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.34375
-    - _ScaleRatioC: 0.34375
+    - _ScaleRatioB: 0.57708335
+    - _ScaleRatioC: 0.57708335
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
