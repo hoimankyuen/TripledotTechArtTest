@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class UIBottomBarView : MonoBehaviour
+public class BottomBarView : MonoBehaviour
 {
     [System.Serializable]
     public class ButtonInfo
@@ -22,6 +22,8 @@ public class UIBottomBarView : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private List<ButtonInfo> buttonInfos;
     [SerializeField] private int defaultSelectedButtonIndex;
+    [SerializeField] private UnityEvent contentActivated;
+    [SerializeField] private UnityEvent closed;
     
     private readonly List<UIBottomBarButton> _buttons = new List<UIBottomBarButton>();
     private UIBottomBarButton _selectedButton;
@@ -33,7 +35,7 @@ public class UIBottomBarView : MonoBehaviour
 
     private void Start()
     {
-        SelectButton(_buttons[Mathf.Clamp(defaultSelectedButtonIndex, 0, buttonInfos.Count - 1)]);
+        SelectButton(null);
     }
     
     private void SetupButtons()
@@ -49,20 +51,28 @@ public class UIBottomBarView : MonoBehaviour
 
     private void SelectButton(UIBottomBarButton selectedButton)
     {
-        _selectedButton = selectedButton;
+        _selectedButton = _selectedButton != selectedButton ? selectedButton : null;
+        
         foreach (UIBottomBarButton button in _buttons)
         {
-            button.ShowAsSelected(button == selectedButton);
+            button.ShowAsSelected(button == _selectedButton);
         }
         buttonFrame.SetTarget(_selectedButton);
 
         if (_selectedButton != null)
         {
-            if (_selectedButton.ButtonInfo != null)
-            {
-                _selectedButton.ButtonInfo.Callback?.Invoke();
-            }
+            _selectedButton.ButtonInfo?.Callback?.Invoke();
+            contentActivated?.Invoke();
         }
+        else
+        {
+            closed?.Invoke();
+        }
+    }
+
+    public void SelectNoButton()
+    {
+        SelectButton(null);
     }
 
     public void Show(bool show)

@@ -14,14 +14,14 @@ public class UIBottomBarButton : MonoBehaviour
     private static readonly int PressedAnimationKey = Animator.StringToHash("Pressed");
     
     public RectTransform RectTransform { get; private set; }
-    public UIBottomBarView.ButtonInfo ButtonInfo { get; private set; }
+    public BottomBarView.ButtonInfo ButtonInfo { get; private set; }
 
     private bool _selected;
     private bool _locked;
 
     private event Action<UIBottomBarButton> _onClick;
     
-    public void Setup(UIBottomBarView.ButtonInfo buttonInfo, Action<UIBottomBarButton> action)
+    public void Setup(BottomBarView.ButtonInfo buttonInfo, Action<UIBottomBarButton> action)
     {
         RectTransform = transform as RectTransform;
         
@@ -40,9 +40,6 @@ public class UIBottomBarButton : MonoBehaviour
         animator.SetTrigger(PressedAnimationKey);
         
         if (_locked)
-            return;
-
-        if (_selected)
             return;
         
         _onClick?.Invoke(this);

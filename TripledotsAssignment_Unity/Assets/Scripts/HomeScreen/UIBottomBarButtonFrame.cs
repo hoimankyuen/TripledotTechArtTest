@@ -4,22 +4,17 @@ using UnityEngine;
 public class UIBottomBarButtonFrame : MonoBehaviour
 {
     [Header("Components")]
+    [SerializeField] private RectTransform selfRectTransform;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float chaseDuration;
     [SerializeField] private AnimationCurve chasingCurve;
     [SerializeField] private AnimationCurve trailingCurve;
+    [SerializeField] private AnimationCurve appearingCurve;
     
-    private RectTransform _selfRectTransform;
     private RectTransform _targetRectTransform;
-    
     private Coroutine _chaseAnimation;
     
     private ScreenOrientation _lastOrientation;
-    
-    private void Awake()
-    {
-        _selfRectTransform = GetComponent<RectTransform>();
-    }
 
     private void Start()
     {
@@ -36,22 +31,25 @@ public class UIBottomBarButtonFrame : MonoBehaviour
     
     public void SetTarget(UIBottomBarButton target)
     {
-        _targetRectTransform = target != null ? target.RectTransform : null;
-        
         if (_chaseAnimation != null)
         {
             StopCoroutine(_chaseAnimation);
         }
-        _chaseAnimation = StartCoroutine(ChaseSequence());
+        _chaseAnimation = StartCoroutine(ChaseSequence(target != null ? target.RectTransform : null));
     }
     
-    private IEnumerator ChaseSequence()
+    private IEnumerator ChaseSequence(RectTransform target)
     {
-        if (_targetRectTransform != null)
+        RectTransform previousTarget = _targetRectTransform;
+        _targetRectTransform = target;
+        
+        if (previousTarget != null && _targetRectTransform != null)
         {
-            float direction = Mathf.Sign(GetXCentre(_targetRectTransform) - GetXCentre(_selfRectTransform));
-            float startXMin = GetXMin(_selfRectTransform);
-            float startXMax = GetXMax(_selfRectTransform);
+            SetY(1);
+            
+            float direction = Mathf.Sign(GetXCentre(_targetRectTransform) - GetXCentre(selfRectTransform));
+            float startXMin = GetXMin(selfRectTransform);
+            float startXMax = GetXMax(selfRectTransform);
             
             float startTime = Time.time;
             while (Time.time < startTime + chaseDuration)
@@ -59,12 +57,35 @@ public class UIBottomBarButtonFrame : MonoBehaviour
                 float targetXMin = GetXMin(_targetRectTransform);
                 float targetXMax = GetXMax(_targetRectTransform);
                 float interpolate = (Time.time - startTime) / chaseDuration;
-                SetXs(_selfRectTransform, 
+                SetXs(
                     Mathf.LerpUnclamped(startXMin, targetXMin, direction > 0 ? trailingCurve.Evaluate(interpolate) : chasingCurve.Evaluate(interpolate)),
                     Mathf.LerpUnclamped(startXMax, targetXMax, direction < 0 ? trailingCurve.Evaluate(interpolate) : chasingCurve.Evaluate(interpolate)));
                 yield return null;
             }
-            SetXs(_selfRectTransform, GetXMin(_targetRectTransform),  GetXMax(_targetRectTransform));
+            SetXs(GetXMin(_targetRectTransform),  GetXMax(_targetRectTransform));
+        }
+        else
+        {
+            float startPosition = previousTarget == null ? 0f : 1f;
+            float targetPosition = _targetRectTransform == null ? 0f : 1f;
+            
+            float startTime = Time.time;
+            while (Time.time < startTime + chaseDuration)
+            {
+                if (_targetRectTransform != null)
+                {
+                    SetXs(GetXMin(_targetRectTransform),  GetXMax(_targetRectTransform));
+                }
+                
+                float interpolate = (Time.time - startTime) / chaseDuration;
+                SetY(Mathf.LerpUnclamped(startPosition, targetPosition, appearingCurve.Evaluate(interpolate)));
+                yield return null;
+            }
+            if (_targetRectTransform != null)
+            {
+                SetXs(GetXMin(_targetRectTransform),  GetXMax(_targetRectTransform));
+            }
+            SetY(targetPosition);
         }
 
         _chaseAnimation = null;
@@ -85,7 +106,7 @@ public class UIBottomBarButtonFrame : MonoBehaviour
 
         if (_targetRectTransform != null)
         {
-            SetXs(_selfRectTransform, GetXMin(_targetRectTransform),  GetXMax(_targetRectTransform));
+            SetXs(GetXMin(_targetRectTransform),  GetXMax(_targetRectTransform));
         }
         _lastOrientation = Screen.orientation;
     }
@@ -110,9 +131,14 @@ public class UIBottomBarButtonFrame : MonoBehaviour
         return rectTransform.position.x + rectTransform.rect.width / 2f * position; 
     }
 
-    private void SetXs(RectTransform rectTransform, float xMin, float xMax)
+    private void SetXs(float xMin, float xMax)
     {
-        rectTransform.position =  new Vector2((xMax + xMin) / 2f, rectTransform.position.y);
-        rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, xMax - xMin);
+        selfRectTransform.position =  new Vector2((xMax + xMin) / 2f, selfRectTransform.position.y);
+        selfRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, xMax - xMin);
+    }
+    
+    private void SetY(float position) // 0 = hidden, 1 = extended
+    {
+        selfRectTransform.anchoredPosition =  new Vector2(selfRectTransform.anchoredPosition.x, Mathf.Lerp(-selfRectTransform.rect.height, 0, position));
     }
 }
