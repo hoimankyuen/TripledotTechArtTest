@@ -119,6 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UILevelCompletedItemDisplay
   valueText: {fileID: 6772571732621835269}
+  burstEffect: {fileID: 0}
+  jumpAnimation: {fileID: 4493735608364925734}
   textAnimationDelay: 0.4
   textAnimationDuration: 0.3
 --- !u!1 &7279082023055856793
@@ -133,6 +135,7 @@ GameObject:
   - component: {fileID: 7936378511640618676}
   - component: {fileID: 5513905651182439941}
   - component: {fileID: 4332115125648545456}
+  - component: {fileID: 4493735608364925734}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -212,6 +215,28 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 0, y: -15}
   m_UseGraphicAlpha: 1
+--- !u!95 &4493735608364925734
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279082023055856793}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33914080a6d6a314fb50908467db1fe2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8114454219230028462
 PrefabInstance:
   m_ObjectHideFlags: 0

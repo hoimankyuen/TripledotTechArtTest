@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class SimpleRotation : MonoBehaviour
+public class SimpleRotationAnimation : MonoBehaviour
 {
+    [Header("Settings")]
     [SerializeField] private Vector3 axis;
     [SerializeField] private float angularVelocity;
 

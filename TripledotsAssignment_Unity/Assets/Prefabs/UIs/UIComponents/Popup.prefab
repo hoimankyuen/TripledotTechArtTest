@@ -469,8 +469,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 812007848297743979}
-        m_TargetAssemblyTypeName: Hider, Assembly-CSharp
-        m_MethodName: Show
+        m_TargetAssemblyTypeName: UITogglable, Assembly-CSharp
+        m_MethodName: Toggle
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -911,8 +911,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 812007848297743979}
-        m_TargetAssemblyTypeName: Hider, Assembly-CSharp
-        m_MethodName: Show
+        m_TargetAssemblyTypeName: UITogglable, Assembly-CSharp
+        m_MethodName: Toggle
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

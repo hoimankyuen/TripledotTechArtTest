@@ -5,11 +5,16 @@ public class UILevelCompletedItemDisplay : UIAnimatedAppearable
 {
     [Header("Components")]
     [SerializeField] private OutlinedText valueText;
+    [SerializeField] private ParticleSystem burstEffect;
+    [SerializeField] private Animator jumpAnimation;
 
     [Header("Settings")]
     [SerializeField] private float textAnimationDelay;
     [SerializeField] private float textAnimationDuration;
 
+    private static readonly int JumpAnimationKey = Animator.StringToHash("Jump");
+
+    
     private int _currentValue;
     private int _pendingValue;
     
@@ -19,8 +24,12 @@ public class UILevelCompletedItemDisplay : UIAnimatedAppearable
     public override void Appear()
     {
         base.Appear();
-        
+
         _animateValueCoroutine = StartCoroutine(WaitAndAnimateValueText());
+        if (burstEffect != null)
+        {
+            burstEffect.Play();
+        }
     }
 
     public void SetInitialValue(int value)
@@ -59,6 +68,11 @@ public class UILevelCompletedItemDisplay : UIAnimatedAppearable
 
     private IEnumerator AnimateValueText(int newValue)
     {
+        if (jumpAnimation != null)
+        {
+            jumpAnimation.SetTrigger(JumpAnimationKey);
+        }
+
         float startTime = Time.time;
         float fromValue = _currentValue;
         while (Time.time < startTime + textAnimationDuration)
