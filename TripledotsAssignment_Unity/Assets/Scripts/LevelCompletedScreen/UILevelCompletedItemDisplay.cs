@@ -13,7 +13,6 @@ public class UILevelCompletedItemDisplay : UIAnimatedAppearable
     [SerializeField] private float textAnimationDuration;
 
     private static readonly int JumpAnimationKey = Animator.StringToHash("Jump");
-
     
     private int _currentValue;
     private int _pendingValue;
@@ -78,10 +77,11 @@ public class UILevelCompletedItemDisplay : UIAnimatedAppearable
         while (Time.time < startTime + textAnimationDuration)
         {
             _currentValue = Mathf.RoundToInt(Mathf.Lerp(fromValue, newValue, (Time.time - startTime) / textAnimationDuration));
-            valueText.SetText(_currentValue.ToString());
+            valueText.SetText($"{_currentValue:n0}");
             yield return null;
         }
-        valueText.SetText(newValue.ToString());
+        _currentValue = newValue;
+        valueText.SetText($"{_currentValue:n0}");
 
         _animateValueCoroutine = null;
     }
