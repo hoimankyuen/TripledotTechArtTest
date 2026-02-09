@@ -13,6 +13,11 @@ public class UIAppearableSequencer : MonoBehaviour
 
     private IEnumerator AppearSequence()
     {
+        if (ScreenChangeFader.Instance != null)
+        {
+            yield return new WaitWhile(() => ScreenChangeFader.Instance.Fading);
+        }
+        
         foreach (UIAppearableSequencerEntry entry in entries)
         {
             yield return new WaitForSeconds(entry.delay);
