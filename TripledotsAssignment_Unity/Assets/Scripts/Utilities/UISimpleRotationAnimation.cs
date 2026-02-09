@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SimpleRotationAnimation : MonoBehaviour
+public class UISimpleRotationAnimation : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private Vector3 axis;

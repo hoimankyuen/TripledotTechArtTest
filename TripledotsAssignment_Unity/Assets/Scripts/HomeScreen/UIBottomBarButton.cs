@@ -1,28 +1,27 @@
 using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BottomBarButton : MonoBehaviour
+public class UIBottomBarButton : MonoBehaviour
 {
     [Header("Components")] 
     [SerializeField] private Animator animator;
     [SerializeField] private Image unlockedImage;
     [SerializeField] private Image lockedImage;
-    [SerializeField] private OutlinedText text;
+    [SerializeField] private UIOutlinedText text;
         
     private static readonly int SelectedAnimationKey = Animator.StringToHash("Selected");
     private static readonly int PressedAnimationKey = Animator.StringToHash("Pressed");
     
     public RectTransform RectTransform { get; private set; }
-    public BottomBarView.ButtonInfo ButtonInfo { get; private set; }
+    public UIBottomBarView.ButtonInfo ButtonInfo { get; private set; }
 
     private bool _selected;
     private bool _locked;
 
-    private event Action<BottomBarButton> _onClick;
+    private event Action<UIBottomBarButton> _onClick;
     
-    public void Setup(BottomBarView.ButtonInfo buttonInfo, Action<BottomBarButton> action)
+    public void Setup(UIBottomBarView.ButtonInfo buttonInfo, Action<UIBottomBarButton> action)
     {
         RectTransform = transform as RectTransform;
         

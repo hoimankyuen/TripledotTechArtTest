@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5093140865199711662}
   - component: {fileID: 8116937557629859779}
   m_Layer: 6
-  m_Name: ParticleRenderer
+  m_Name: UIParticleRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

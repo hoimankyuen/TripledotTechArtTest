@@ -4,7 +4,7 @@ using UnityEngine;
 public class UILevelCompletedItemDisplay : UIAnimatedAppearable
 {
     [Header("Components")]
-    [SerializeField] private OutlinedText valueText;
+    [SerializeField] private UIOutlinedText valueText;
     [SerializeField] private ParticleSystem burstEffect;
     [SerializeField] private Animator jumpAnimation;
 

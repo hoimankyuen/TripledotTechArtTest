@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PopupToggle : MonoBehaviour
+public class UIPopupToggle : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Toggle toggle;

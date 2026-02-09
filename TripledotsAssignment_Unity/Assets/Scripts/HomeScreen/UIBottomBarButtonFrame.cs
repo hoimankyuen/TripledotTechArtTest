@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class BottomBarButtonFrame : MonoBehaviour
+public class UIBottomBarButtonFrame : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private CanvasGroup canvasGroup;
@@ -34,7 +34,7 @@ public class BottomBarButtonFrame : MonoBehaviour
         RefreshTransform();
     }
     
-    public void SetTarget(BottomBarButton target)
+    public void SetTarget(UIBottomBarButton target)
     {
         _targetRectTransform = target != null ? target.RectTransform : null;
         

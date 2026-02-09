@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(RectTransform))]
-public class SafeAreaContainer : MonoBehaviour
+public class UISafeAreaContainer : MonoBehaviour
 {
     private Canvas _canvas;
     private RectTransform _rectTransform;

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(RectTransform))]
-public class ParentSizeFitter : MonoBehaviour
+public class UIParentSizeFitter : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float preferredWidth;

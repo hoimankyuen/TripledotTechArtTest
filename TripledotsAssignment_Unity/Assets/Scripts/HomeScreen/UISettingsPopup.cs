@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SettingsPopup : MonoBehaviour
+public class UISettingsPopup : MonoBehaviour
 {
     [Header("Components")] 
     [SerializeField] private UITogglable togglable;

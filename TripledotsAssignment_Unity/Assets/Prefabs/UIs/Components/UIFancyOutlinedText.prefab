@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 8453130766305092812}
   - component: {fileID: 2423005643913419775}
   m_Layer: 5
-  m_Name: FancyOutlinedText
+  m_Name: UIFancyOutlinedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

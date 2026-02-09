@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class TopBarDisplay : MonoBehaviour
+public class UITopBarDisplay : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private TextMeshProUGUI contentText;

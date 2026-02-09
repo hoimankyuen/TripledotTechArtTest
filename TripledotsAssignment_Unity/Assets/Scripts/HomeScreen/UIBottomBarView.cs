@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BottomBarView : MonoBehaviour
+public class UIBottomBarView : MonoBehaviour
 {
     [System.Serializable]
     public class ButtonInfo
@@ -17,14 +17,14 @@ public class BottomBarView : MonoBehaviour
     [SerializeField] private UITogglable togglable;
     [SerializeField] private Transform buttonContainer;
     [SerializeField] private GameObject buttonPrefab;
-    [SerializeField] private BottomBarButtonFrame buttonFrame;
+    [SerializeField] private UIBottomBarButtonFrame buttonFrame;
 
     [Header("Settings")]
     [SerializeField] private List<ButtonInfo> buttonInfos;
     [SerializeField] private int defaultSelectedButtonIndex;
     
-    private readonly List<BottomBarButton> _buttons = new List<BottomBarButton>();
-    private BottomBarButton _selectedButton;
+    private readonly List<UIBottomBarButton> _buttons = new List<UIBottomBarButton>();
+    private UIBottomBarButton _selectedButton;
     
     private void Awake()
     {
@@ -40,17 +40,17 @@ public class BottomBarView : MonoBehaviour
     {
         foreach (ButtonInfo buttonInfo in buttonInfos)
         {
-            BottomBarButton button = Instantiate(buttonPrefab, buttonContainer).GetComponent<BottomBarButton>();
+            UIBottomBarButton button = Instantiate(buttonPrefab, buttonContainer).GetComponent<UIBottomBarButton>();
             button.Setup(buttonInfo, SelectButton);
             _buttons.Add(button);
         }
         buttonPrefab.SetActive(false);
     }
 
-    private void SelectButton(BottomBarButton selectedButton)
+    private void SelectButton(UIBottomBarButton selectedButton)
     {
         _selectedButton = selectedButton;
-        foreach (BottomBarButton button in _buttons)
+        foreach (UIBottomBarButton button in _buttons)
         {
             button.ShowAsSelected(button == selectedButton);
         }
