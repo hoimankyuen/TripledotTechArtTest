@@ -12,9 +12,9 @@ public class BottomBarView : MonoBehaviour
         public bool Locked;
         public UnityEvent Callback;
     }
-
+    
     [Header("Components")] 
-    [SerializeField] private Hider hider;
+    [SerializeField] private UITogglable togglable;
     [SerializeField] private Transform buttonContainer;
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private BottomBarButtonFrame buttonFrame;
@@ -67,6 +67,6 @@ public class BottomBarView : MonoBehaviour
 
     public void Show(bool show)
     {
-        hider.Show(show);
+        togglable.Toggle(show);
     }
 }

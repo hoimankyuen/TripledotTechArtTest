@@ -1821,7 +1821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915b782471aeb4d47b17f0a91dffe2fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SettingsPopup
-  hider: {fileID: 6393972743089949798}
+  togglable: {fileID: 6393972743089949798}
 --- !u!224 &4858185330950223574 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1194752773044370651, guid: cadbb7ab45467bd4abfccc6bf0e6fe65, type: 3}
@@ -1955,7 +1955,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1154722998392911287, guid: 0daff31e2f824e94694dc7f0ab758a5e, type: 3}
       propertyPath: m_fontSize
-      value: 183.3
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 1570970203546963803, guid: 0daff31e2f824e94694dc7f0ab758a5e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1983,7 +1983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3119859135924443276, guid: 0daff31e2f824e94694dc7f0ab758a5e, type: 3}
       propertyPath: m_fontSize
-      value: 183.3
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 8097997489095343923, guid: 0daff31e2f824e94694dc7f0ab758a5e, type: 3}
       propertyPath: m_Pivot.x
@@ -2337,7 +2337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1154722998392911287, guid: 0daff31e2f824e94694dc7f0ab758a5e, type: 3}
       propertyPath: m_fontSize
-      value: 183.3
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 1570970203546963803, guid: 0daff31e2f824e94694dc7f0ab758a5e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2369,7 +2369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3119859135924443276, guid: 0daff31e2f824e94694dc7f0ab758a5e, type: 3}
       propertyPath: m_fontSize
-      value: 183.3
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 8097997489095343923, guid: 0daff31e2f824e94694dc7f0ab758a5e, type: 3}
       propertyPath: m_Pivot.x

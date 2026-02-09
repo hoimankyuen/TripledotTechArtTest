@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd9083b8d0acf6478176d81c3d6d625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BottomBarView
-  hider: {fileID: 9180654781285227559}
+  togglable: {fileID: 9180654781285227559}
   buttonContainer: {fileID: 4414310082450522657}
   buttonPrefab: {fileID: 9120113948014777909}
   buttonFrame: {fileID: 6949567552372229187}
@@ -669,6 +669,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5485280431635985000, guid: cd29a92cb8d1a984fb0c81080b0aa2c6, type: 3}
+      propertyPath: m_fontSize
+      value: 103.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6943923062269520429, guid: cd29a92cb8d1a984fb0c81080b0aa2c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -768,6 +772,10 @@ PrefabInstance:
     - target: {fileID: 8137320806791923975, guid: cd29a92cb8d1a984fb0c81080b0aa2c6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8597987783626596179, guid: cd29a92cb8d1a984fb0c81080b0aa2c6, type: 3}
+      propertyPath: m_fontSize
+      value: 103.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

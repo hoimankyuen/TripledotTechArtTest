@@ -1,13 +1,18 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class Hider : MonoBehaviour
+public class UITogglable : UIAppearable
 {
     private static readonly int ShownAnimationKey = Animator.StringToHash("Shown");
     
     private Animator _animator;
+
+    public override void Appear()
+    {
+        Toggle(true);
+    }
     
-    public void Show(bool show)
+    public void Toggle(bool show)
     {
         if (_animator == null)
         {

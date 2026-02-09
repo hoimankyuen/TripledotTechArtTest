@@ -3,10 +3,10 @@ using UnityEngine;
 public class SettingsPopup : MonoBehaviour
 {
     [Header("Components")] 
-    [SerializeField] private Hider hider;
+    [SerializeField] private UITogglable togglable;
 
     public void Show(bool show)
     {
-        hider.Show(show);
+        togglable.Toggle(show);
     }
 }
