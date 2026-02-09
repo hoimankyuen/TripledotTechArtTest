@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class UIAnimatedppearable : UIAppearable
+public class UIAnimatedAppearable : UIAppearable
 {
     private static readonly int AppearAnimationKey = Animator.StringToHash("Appear");
     
