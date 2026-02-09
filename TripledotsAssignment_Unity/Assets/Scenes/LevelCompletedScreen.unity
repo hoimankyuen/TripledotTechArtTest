@@ -15732,7 +15732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAppearableSequencer
   entries:
-  - delay: 0.5
+  - delay: 0.3
     appearable: {fileID: 450567643}
   - delay: 0.3
     appearable: {fileID: 1150451958}
