@@ -1,17 +1,25 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScreenChangeFader : MonoBehaviour
 {
    public static ScreenChangeFader Instance;
 
-   [Header("Components")]
-   [SerializeField] private CanvasGroup canvasGroup;
+   [Header("Components")] 
+   [SerializeField] private CanvasGroup faderCanvasGroup;
+   [SerializeField] private Image faderImage;
 
    [Header("Settings")]
    [SerializeField] private float fadeDuration;
+   [SerializeField] private float fadeCoverage;
    [SerializeField] private float loadDelay;
+
+   private static readonly int FadeFromProperty = Shader.PropertyToID("_FadeFrom");
+   private static readonly int FadeToProperty = Shader.PropertyToID("_FadeTo");
+   
+   private Material _faderMaterialInstance;
    
    public bool Fading { get; private set; }
    
@@ -24,6 +32,9 @@ public class ScreenChangeFader : MonoBehaviour
       }
       Instance = this;
       DontDestroyOnLoad(gameObject);
+
+      _faderMaterialInstance = Instantiate(faderImage.material);
+      faderImage.material = _faderMaterialInstance;
    }
 
    private void OnDestroy()
@@ -31,9 +42,11 @@ public class ScreenChangeFader : MonoBehaviour
       if (Instance == this)
       {
          Instance = null;
+         
+         Destroy(_faderMaterialInstance);
       }
    }
-
+   
    public void Fade(Action onFaded)
    {
       if (Fading)
@@ -45,18 +58,25 @@ public class ScreenChangeFader : MonoBehaviour
    private IEnumerator FadeSequence(Action onFaded)
    {
       Fading = true;
+
+      float height = faderImage.rectTransform.rect.height;
+      float lowerFrom = -height / 2f - height * fadeCoverage;
+      float lowerTo = height / 2f;
+      float upperFrom = -height / 2f;
+      float upperTo = height / 2f + height * fadeCoverage;
       
-      canvasGroup.alpha = 0;
-      canvasGroup.blocksRaycasts = true;
-      canvasGroup.interactable = true;
+      faderCanvasGroup.alpha = 1;
+      faderCanvasGroup.blocksRaycasts = true;
+      faderCanvasGroup.interactable = true;
       
       float startTime = Time.time;
       while (Time.time - startTime < fadeDuration)
       {
-         canvasGroup.alpha = Sinerp(0f, 1f, (Time.time - startTime) / fadeDuration);
+         float interpolate = (Time.time - startTime) / fadeDuration;
+         _faderMaterialInstance.SetFloat(FadeToProperty, Mathf.Lerp(lowerFrom, lowerTo, interpolate));
+         _faderMaterialInstance.SetFloat(FadeFromProperty, Mathf.Lerp(upperFrom, upperTo, interpolate));
          yield return null;
       }
-      canvasGroup.alpha = 1;
       
       onFaded?.Invoke();
       yield return new WaitForSeconds(loadDelay);
@@ -64,25 +84,15 @@ public class ScreenChangeFader : MonoBehaviour
       startTime = Time.time;
       while (Time.time - startTime < fadeDuration)
       {
-         canvasGroup.alpha = Coserp(1f, 0f, (Time.time - startTime) / fadeDuration);
+         float interpolate = (Time.time - startTime) / fadeDuration;
+         _faderMaterialInstance.SetFloat(FadeFromProperty, Mathf.Lerp(lowerFrom, lowerTo, interpolate));
+         _faderMaterialInstance.SetFloat(FadeToProperty, Mathf.Lerp(upperFrom, upperTo, interpolate));
          yield return null;
       }
-      canvasGroup.alpha = 0;
-      canvasGroup.blocksRaycasts = false;
-      canvasGroup.interactable = false;
+      faderCanvasGroup.alpha = 0;
+      faderCanvasGroup.blocksRaycasts = false;
+      faderCanvasGroup.interactable = false;
 
       Fading = false;
-   }
-   
-   // Easing out method extracted from Mathfx
-   public static float Sinerp(float start, float end, float value)
-   {
-      return Mathf.Lerp(start, end, Mathf.Sin(value * Mathf.PI * 0.5f));
-   }
-   
-   // Easing in method extracted from Mathfx
-   public static float Coserp(float start, float end, float value)
-   {
-      return Mathf.Lerp(start, end, 1.0f - Mathf.Cos(value * Mathf.PI * 0.5f));
    }
 }

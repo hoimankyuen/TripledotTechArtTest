@@ -69,7 +69,7 @@ Shader "Custom/Unlit/UIReflection"
             {
                 float4 vertex : SV_POSITION;
                 fixed4 color : COLOR;
-                float4 worldPosition : TEXCOORD1;
+                float4 worldPosition : TEXCOORD0;
                 UNITY_VERTEX_OUTPUT_STEREO
             };
             
@@ -84,8 +84,8 @@ Shader "Custom/Unlit/UIReflection"
                 v2f o;
                 UNITY_SETUP_INSTANCE_ID(v);
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
-                o.worldPosition = v.vertex;
-                o.vertex = UnityObjectToClipPos(o.worldPosition);
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.worldPosition = mul(unity_ObjectToWorld, v.vertex);
                 o.color = v.color;
                 return o;
             }
