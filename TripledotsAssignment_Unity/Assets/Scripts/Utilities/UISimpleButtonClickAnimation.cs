@@ -5,6 +5,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class UISimpleButtonClickAnimation : MonoBehaviour
 {
+    [Header("Settings")]
     [SerializeField] private float sizeChange = 0.1f;
     [SerializeField] private float duration = 0.2f;
     

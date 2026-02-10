@@ -68,7 +68,6 @@ public class ScreenChangeFader : MonoBehaviour
       faderCanvasGroup.alpha = 1;
       faderCanvasGroup.blocksRaycasts = true;
       faderCanvasGroup.interactable = true;
-      
       float startTime = Time.time;
       while (Time.time - startTime < fadeDuration)
       {

@@ -16,15 +16,17 @@ public class UIBottomBarButton : MonoBehaviour
     public RectTransform RectTransform { get; private set; }
     public BottomBarView.ButtonInfo ButtonInfo { get; private set; }
 
-    private bool _selected;
     private bool _locked;
 
     private event Action<UIBottomBarButton> _onClick;
+
+    private void Awake()
+    {
+        RectTransform = transform as RectTransform;
+    }
     
     public void Setup(BottomBarView.ButtonInfo buttonInfo, Action<UIBottomBarButton> action)
     {
-        RectTransform = transform as RectTransform;
-        
         ButtonInfo = buttonInfo;
         _onClick = action;
         _locked = buttonInfo.Locked;
@@ -47,7 +49,6 @@ public class UIBottomBarButton : MonoBehaviour
 
     public void ShowAsSelected(bool selected)
     {
-        _selected = selected;
         animator.SetBool(SelectedAnimationKey, selected);
     }
 }

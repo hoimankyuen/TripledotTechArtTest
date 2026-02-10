@@ -27,6 +27,9 @@ public class UIParentSizeFitter : MonoBehaviour
     
     private void Update()
     {
+        if (_parentRectTransform == null)
+            return;
+        
         if (Mathf.Approximately(Vector2.Distance(_lastParentSize, _parentRectTransform.rect.size), 0f))
             return;
         
@@ -35,15 +38,14 @@ public class UIParentSizeFitter : MonoBehaviour
     
     private void FitInParent()
     {
-        RectTransform parentRectTransform = _rectTransform.parent as RectTransform;
-        if (parentRectTransform == null)
+        if (_parentRectTransform == null)
             return;
         
         _rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,
-            Mathf.Min(preferredWidth, parentRectTransform.rect.size.x - horizontalPadding));
+            Mathf.Min(preferredWidth, _parentRectTransform.rect.size.x - horizontalPadding));
         _rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,
-            Mathf.Min(preferredHeight, parentRectTransform.rect.size.y - verticalPadding));
+            Mathf.Min(preferredHeight, _parentRectTransform.rect.size.y - verticalPadding));
         
-        _lastParentSize = parentRectTransform.rect.size;
+        _lastParentSize = _parentRectTransform.rect.size;
     }
 }

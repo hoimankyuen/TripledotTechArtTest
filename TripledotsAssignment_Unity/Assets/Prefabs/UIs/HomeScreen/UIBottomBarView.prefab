@@ -216,7 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91c4de71e3634f4d9991c50c67e5b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BottomBarButtonFrame
-  selfRectTransform: {fileID: 1858954475597842925}
   canvasGroup: {fileID: 5826807191589485725}
   chaseDuration: 0.25
   chasingCurve:

@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ScreenChanger : MonoBehaviour
 {
+    [Header("Settings")]
     [SerializeField] private string homeSceneName;
     [SerializeField] private string levelCompletedSceneName;
 

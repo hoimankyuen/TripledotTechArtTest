@@ -33,9 +33,9 @@ public class UISafeAreaContainer : MonoBehaviour
 
     private void RefreshSafeArea()
     {
-        float scaleFactor = _canvas != null ? 1f / _canvas.transform.localScale.x : 1.0f;
         Rect safeArea = Screen.safeArea;
         Resolution resolution = Screen.currentResolution;
+        float scaleFactor = _canvas != null ? 1f / _canvas.transform.localScale.x : 1.0f;
         
         Vector2 newSizeDelta = new Vector2(safeArea.width - resolution.width, safeArea.height - resolution.height);
         Vector2 newAnchoredPosition = new Vector2(newSizeDelta.x / 2f + safeArea.x, newSizeDelta.y / 2f + safeArea.y);

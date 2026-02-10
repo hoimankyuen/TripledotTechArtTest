@@ -72,8 +72,8 @@ public class UILevelCompletedItemDisplay : UIAnimatedAppearable
             jumpAnimation.SetTrigger(JumpAnimationKey);
         }
 
-        float startTime = Time.time;
         float fromValue = _currentValue;
+        float startTime = Time.time;
         while (Time.time < startTime + textAnimationDuration)
         {
             _currentValue = Mathf.RoundToInt(Mathf.Lerp(fromValue, newValue, (Time.time - startTime) / textAnimationDuration));
