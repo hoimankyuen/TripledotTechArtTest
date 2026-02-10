@@ -247,8 +247,8 @@ TextureImporter:
       name: SettingsSprites_LanguageEN
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
+        x: 768
+        y: 0
         width: 256
         height: 256
       alignment: 0
@@ -270,7 +270,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 377
+        y: 317
         width: 432
         height: 14
       alignment: 0
@@ -291,8 +291,8 @@ TextureImporter:
       name: SettingsSprites_Next
       rect:
         serializedVersion: 2
-        x: 548
-        y: 356
+        x: 35
+        y: 439
         width: 184
         height: 277
       alignment: 0
@@ -313,8 +313,8 @@ TextureImporter:
       name: SettingsSprites_Back
       rect:
         serializedVersion: 2
-        x: 804
-        y: 356
+        x: 548
+        y: 439
         width: 184
         height: 277
       alignment: 0
@@ -375,6 +375,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SettingsSprites_NextPressed
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 452
+        width: 190
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a39a1f09800bc4d9f11cd4e3a99b21
+      internalID: 1409129272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SettingsSprites_BackPressed
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 452
+        width: 186
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd0270a2d58cc843a13a5781dcefb0f
+      internalID: -741681074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -391,16 +435,18 @@ TextureImporter:
       - key: SpriteEditor.SliceOnImport
         value: False
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      SettingsSprites_0: 735940344
-      SettingsSprites_1: -741681074
       SettingsSprites_2: -1277568382
+      SettingsSprites_3: -1339918600
+      SettingsSprites_4: -992747607
       SettingsSprites_7: 400171634
       SettingsSprites_Back: -1158261754
+      SettingsSprites_BackPressed: -741681074
       SettingsSprites_LanguageEN: 4426586608018358913
       SettingsSprites_Music: 3701599967680507574
       SettingsSprites_Next: 1518944053
+      SettingsSprites_NextPressed: 735940344
       SettingsSprites_Notification: 6023658428357795325
       SettingsSprites_Seperator: -1039033878
       SettingsSprites_Sound: -2743863578720128744
