@@ -177,6 +177,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.00012207031
       objectReference: {fileID: 0}
+    - target: {fileID: 2370686963440488335, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
+      propertyPath: text
+      value: Full
+      objectReference: {fileID: 0}
     - target: {fileID: 2582155222316455798, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -191,7 +195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4678951796342762969, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
       propertyPath: m_Name
-      value: UITopBarDisplay(Heart) Variant
+      value: UITopBarDisplay(Heart)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887338646969511835, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
+      propertyPath: m_text
+      value: Full
       objectReference: {fileID: 0}
     - target: {fileID: 8064809977474188002, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
       propertyPath: m_Pivot.x
@@ -302,33 +310,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47e9a4d10de9d6469b065289c309082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UITopBarHealthDisplay
-  contentText: {fileID: 7317548383106584262}
-  addButton: {fileID: 6839680006544696497}
+  contentText: {fileID: 8717253180528317250}
+  addButton: {fileID: 8783300898014161419}
   textAnimationDuration: 0.3
   onAddButtonClicked:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MockHomeController, Assembly-CSharp
-        m_MethodName: IncreaseLifeValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   heartText: {fileID: 568056110988028498}
 --- !u!224 &6075264298714354584 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 887231247728152405, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
   m_PrefabInstance: {fileID: 6349997063304764621}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6839680006544696497 stripped
+--- !u!114 &8717253180528317250 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 501258646219257980, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2370686963440488335, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
+  m_PrefabInstance: {fileID: 6349997063304764621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b10e7f1ff092764e8fb37a0e769ac0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIOutlinedText
+--- !u!114 &8783300898014161419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2448609156895946438, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
   m_PrefabInstance: {fileID: 6349997063304764621}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -337,14 +344,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!114 &7317548383106584262 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4436784313425498635, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
-  m_PrefabInstance: {fileID: 6349997063304764621}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI

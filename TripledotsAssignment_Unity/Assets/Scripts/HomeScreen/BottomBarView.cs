@@ -2,11 +2,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BottomBarView : MonoBehaviour
+public class BottomBarView : UIAnimatedTogglable
 {
     [System.Serializable]
     public class ButtonInfo
     {
+        public string id;
         public Sprite Icon;
         public string Label;
         public bool Locked;
@@ -14,19 +15,19 @@ public class BottomBarView : MonoBehaviour
     }
     
     [Header("Components")] 
-    [SerializeField] private UITogglable togglable;
     [SerializeField] private Transform buttonContainer;
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private UIBottomBarButtonFrame buttonFrame;
 
     [Header("Settings")]
     [SerializeField] private List<ButtonInfo> buttonInfos;
-    [SerializeField] private int defaultSelectedButtonIndex;
     [SerializeField] private UnityEvent contentActivated;
     [SerializeField] private UnityEvent closed;
     
     private readonly List<UIBottomBarButton> _buttons = new List<UIBottomBarButton>();
     private UIBottomBarButton _selectedButton;
+
+    public string SelectedButtonId => _selectedButton != null ? _selectedButton.ButtonInfo.id : "";
     
     private void Awake()
     {
@@ -73,10 +74,5 @@ public class BottomBarView : MonoBehaviour
     public void SelectNoButton()
     {
         SelectButton(null);
-    }
-
-    public void Show(bool show)
-    {
-        togglable.Toggle(show);
     }
 }

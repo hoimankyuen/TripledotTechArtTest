@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.00012207031
       objectReference: {fileID: 0}
+    - target: {fileID: 2370686963440488335, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
+      propertyPath: text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2582155222316455798, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -34,7 +38,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4678951796342762969, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
       propertyPath: m_Name
-      value: UITopBarDisplay(Star) Variant
+      value: UITopBarDisplay(Star)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887338646969511835, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066885560126153994, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7659921809444181077, guid: 7acee335741a9624281d78100a39b4a0, type: 3}
       propertyPath: m_IsActive

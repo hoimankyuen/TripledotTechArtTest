@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 5527109300300271003}
   - component: {fileID: 8462870412985658525}
   m_Layer: 5
-  m_Name: UIPopupSettingsToggle
+  m_Name: UISettingsPopupToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

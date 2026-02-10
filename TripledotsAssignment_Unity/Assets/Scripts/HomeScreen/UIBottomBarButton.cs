@@ -8,7 +8,7 @@ public class UIBottomBarButton : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Image unlockedImage;
     [SerializeField] private Image lockedImage;
-    [SerializeField] private UIOutlinedText text;
+    [SerializeField] private UIText text;
         
     private static readonly int SelectedAnimationKey = Animator.StringToHash("Selected");
     private static readonly int PressedAnimationKey = Animator.StringToHash("Pressed");

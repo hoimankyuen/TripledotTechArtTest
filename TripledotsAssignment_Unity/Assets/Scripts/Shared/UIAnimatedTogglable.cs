@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class UITogglable : UIAppearable
+public class UIAnimatedTogglable : UIAppearable
 {
     private static readonly int ShownAnimationKey = Animator.StringToHash("Shown");
     

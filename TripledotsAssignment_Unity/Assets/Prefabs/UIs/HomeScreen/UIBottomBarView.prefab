@@ -398,7 +398,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6273565948660751439}
   - component: {fileID: 342239478923499761}
-  - component: {fileID: 9180654781285227559}
   - component: {fileID: 1746526625996436816}
   m_Layer: 5
   m_Name: UIBottomBarView
@@ -440,60 +439,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd9083b8d0acf6478176d81c3d6d625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BottomBarView
-  togglable: {fileID: 9180654781285227559}
   buttonContainer: {fileID: 4414310082450522657}
   buttonPrefab: {fileID: 9120113948014777909}
   buttonFrame: {fileID: 6949567552372229187}
   buttonInfos:
-  - Icon: {fileID: 0}
+  - id: 
+    Icon: {fileID: 0}
     Label: Unknown
     Locked: 1
     Callback:
       m_PersistentCalls:
         m_Calls: []
-  - Icon: {fileID: 4131289052685355601, guid: 3cff043e3540eb6459ad5318cfe8ca8e, type: 3}
+  - id: 
+    Icon: {fileID: 4131289052685355601, guid: 3cff043e3540eb6459ad5318cfe8ca8e, type: 3}
     Label: Shop
     Locked: 0
     Callback:
       m_PersistentCalls:
         m_Calls: []
-  - Icon: {fileID: -7762908267683683427, guid: 3cff043e3540eb6459ad5318cfe8ca8e, type: 3}
+  - id: 
+    Icon: {fileID: -7762908267683683427, guid: 3cff043e3540eb6459ad5318cfe8ca8e, type: 3}
     Label: Home
     Locked: 0
     Callback:
       m_PersistentCalls:
         m_Calls: []
-  - Icon: {fileID: -3221273994799822951, guid: 3cff043e3540eb6459ad5318cfe8ca8e, type: 3}
+  - id: 
+    Icon: {fileID: -3221273994799822951, guid: 3cff043e3540eb6459ad5318cfe8ca8e, type: 3}
     Label: Map
     Locked: 0
     Callback:
       m_PersistentCalls:
         m_Calls: []
-  - Icon: {fileID: 0}
+  - id: 
+    Icon: {fileID: 0}
     Label: Unknown
     Locked: 1
     Callback:
       m_PersistentCalls:
         m_Calls: []
-  defaultSelectedButtonIndex: 2
   contentActivated:
     m_PersistentCalls:
       m_Calls: []
   closed:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &9180654781285227559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6052979513293732795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 784f11564795b65479514ca1d195dfc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Hider
 --- !u!95 &1746526625996436816
 Animator:
   serializedVersion: 7

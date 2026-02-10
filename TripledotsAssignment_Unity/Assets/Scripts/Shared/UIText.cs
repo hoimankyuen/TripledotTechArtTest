@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UIOutlinedText : MonoBehaviour
+public class UIText : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private List<TextMeshProUGUI> textMeshProUGUIs;

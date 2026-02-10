@@ -3,7 +3,7 @@ using UnityEngine;
 public class UITopBarHealthDisplay : UITopBarDisplay
 {
     [Header("Components")]
-    [SerializeField] private UIOutlinedText heartText;
+    [SerializeField] private UIText heartText;
 
     private int _maxHealth;
     private int _health;
@@ -23,7 +23,7 @@ public class UITopBarHealthDisplay : UITopBarDisplay
     private void ResolveDisplay()
     {
         heartText.SetText(_health.ToString());
-        contentText.text = _health == _maxHealth ? "Full" : $"{_health} / {_maxHealth}";
+        contentText.SetText(_health == _maxHealth ? "Full" : $"{_health} / {_maxHealth}");
         addButton.gameObject.SetActive(_health < _maxHealth);
     }
 }

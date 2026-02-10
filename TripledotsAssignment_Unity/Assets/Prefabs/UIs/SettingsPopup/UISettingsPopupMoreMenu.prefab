@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 3941394101709430226}
   - component: {fileID: 7514300464809204402}
   m_Layer: 5
-  m_Name: UIPopupSettingsMoreMenu
+  m_Name: UISettingsPopupMoreMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

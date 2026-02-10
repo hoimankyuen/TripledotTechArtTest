@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -7,7 +6,7 @@ using UnityEngine.UI;
 public class UITopBarDisplay : UIAnimatedAppearable
 {
     [Header("Components")]
-    [SerializeField] protected TextMeshProUGUI contentText;
+    [SerializeField] protected UIText contentText;
     [SerializeField] protected Button addButton;
     
     [Header("Settings")]

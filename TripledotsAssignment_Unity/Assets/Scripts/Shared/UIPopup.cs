@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIPopup : UITogglable
+public class UIPopup : UIAnimatedTogglable
 {
     [Header("Components")]
     [SerializeField] private UIPopupPage mainPage;
