@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class UIAppearableSequencer : MonoBehaviour
 {
+    [Header("Settings")]
     [SerializeField] private List<UIAppearableSequencerEntry> entries;
+    [SerializeField] private float fastForwardDelay = 0.1f;
 
     private void Awake()
     {
@@ -21,11 +23,10 @@ public class UIAppearableSequencer : MonoBehaviour
         foreach (UIAppearableSequencerEntry entry in entries)
         {
             float startTIme = Time.time;
-            while (Time.time < startTIme + entry.delay && !Input.GetMouseButton(0))
+            while (Time.time < startTIme + (Input.GetMouseButton(0) ? fastForwardDelay : entry.delay))
             {
                 yield return null;
             }
-            //yield return new WaitForSeconds(entry.delay);
             entry.appearable?.Appear();
         }
     }
