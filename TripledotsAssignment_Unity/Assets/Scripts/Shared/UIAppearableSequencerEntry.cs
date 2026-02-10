@@ -4,5 +4,5 @@ using UnityEngine;
 public struct UIAppearableSequencerEntry
 {
     public float delay;
-    public UIAnimatedAppearable appearable;
+    public UIAppearable appearable;
 }

@@ -2186,13 +2186,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAppearableSequencer
   entries:
-  - delay: 0.3
+  - delay: 0.2
+    appearable: {fileID: 8351878820347691651}
+  - delay: 0.2
     appearable: {fileID: 9025656926688966297}
-  - delay: 0.3
+  - delay: 0.2
     appearable: {fileID: 4678515858197944088}
-  - delay: 0.3
+  - delay: 0.2
     appearable: {fileID: 2984147749683742636}
-  - delay: 0.3
+  - delay: 0.2
     appearable: {fileID: 8387575438320638903}
 --- !u!1 &2076344284
 GameObject:
@@ -4707,6 +4709,62 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 103.3
       objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: closed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: closed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: contentActivated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: closed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1046107027}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: closed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: closed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBottomBarViewClosed
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: contentActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: contentActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1046107027}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: contentActivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: contentActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBottomBarViewContentActivated
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: closed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MockHomeController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: contentActivated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MockHomeController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: closed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 342239478923499761, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+      propertyPath: contentActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3316070846702292618, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4860,6 +4918,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+--- !u!114 &8351878820347691651 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9180654781285227559, guid: 45d3dab0d132a824988bc4104c32c219, type: 3}
+  m_PrefabInstance: {fileID: 8351878820347691650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784f11564795b65479514ca1d195dfc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hider
 --- !u!1 &8355660690693415192
 GameObject:
   m_ObjectHideFlags: 0

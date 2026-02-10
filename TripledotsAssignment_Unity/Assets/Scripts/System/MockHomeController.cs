@@ -48,4 +48,14 @@ public class MockHomeController : MonoBehaviour
         _healthValue = Mathf.Min(_healthValue + amount, _maxHealthValue);
         healthValueChanged?.Invoke(_healthValue);
     }
+
+    public void OnBottomBarViewContentActivated()
+    {
+        Debug.Log("Content Activated");
+    }
+    
+    public void OnBottomBarViewClosed()
+    {
+        Debug.Log("Closed");
+    }
 }
