@@ -1,12 +1,9 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UITopBarHealthDisplay : UITopBarDisplay
 {
     [Header("Components")]
     [SerializeField] private UIOutlinedText heartText;
-    [SerializeField] private Button addButton;
 
     private int _maxHealth;
     private int _health;

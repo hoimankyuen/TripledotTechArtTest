@@ -1,18 +1,35 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class UITopBarDisplay : UIAnimatedAppearable
 {
     [Header("Components")]
     [SerializeField] protected TextMeshProUGUI contentText;
+    [SerializeField] protected Button addButton;
     
     [Header("Settings")]
     [SerializeField] private float textAnimationDuration;
+    [SerializeField] private UnityEvent onAddButtonClicked;
     
     private int _currentValue;
     private Coroutine _animateValueCoroutine;
-    
+
+    private void Awake()
+    {
+        addButton.onClick.AddListener(onAddButtonClicked.Invoke);
+    }
+
+    private void OnDestroy()
+    {
+        if (addButton != null)
+        {
+            addButton.onClick.RemoveListener(onAddButtonClicked.Invoke);
+        }
+    }
+
     public virtual void SetValue(int value)
     {
         if (_animateValueCoroutine != null)

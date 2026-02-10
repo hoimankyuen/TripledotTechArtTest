@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6326446193607298844}
   - component: {fileID: 4069283261733561577}
   m_Layer: 5
-  m_Name: UIButton
+  m_Name: UITextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec051a6079bf0824cb400094b9923474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UISimpleButtonClickAnimation
-  size: 0.1
+  sizeChange: -0.1
   duration: 0.2
 --- !u!222 &7487614307694062051
 CanvasRenderer:
