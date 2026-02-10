@@ -20,7 +20,12 @@ public class UIAppearableSequencer : MonoBehaviour
         
         foreach (UIAppearableSequencerEntry entry in entries)
         {
-            yield return new WaitForSeconds(entry.delay);
+            float startTIme = Time.time;
+            while (Time.time < startTIme + entry.delay && !Input.GetMouseButton(0))
+            {
+                yield return null;
+            }
+            //yield return new WaitForSeconds(entry.delay);
             entry.appearable?.Appear();
         }
     }
