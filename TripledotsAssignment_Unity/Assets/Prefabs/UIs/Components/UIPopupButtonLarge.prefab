@@ -106,19 +106,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3428886788896761707, guid: 3c294bf46abdf0c4f965476590229866, type: 3}
       propertyPath: m_Name
-      value: SupportButton Variant
+      value: UIPopupButtonLarge
       objectReference: {fileID: 0}
     - target: {fileID: 4172078468300257972, guid: 3c294bf46abdf0c4f965476590229866, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4057630998675155635, guid: 0e12ae4c4e88d8b4fa94e97d71aed3e9, type: 3}
     - target: {fileID: 5316637924086028371, guid: 3c294bf46abdf0c4f965476590229866, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316637924086028371, guid: 3c294bf46abdf0c4f965476590229866, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316637924086028371, guid: 3c294bf46abdf0c4f965476590229866, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5316637924086028371, guid: 3c294bf46abdf0c4f965476590229866, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5316637924086028371, guid: 3c294bf46abdf0c4f965476590229866, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -126,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316637924086028371, guid: 3c294bf46abdf0c4f965476590229866, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5477271482059563711, guid: 3c294bf46abdf0c4f965476590229866, type: 3}
       propertyPath: m_fontSize

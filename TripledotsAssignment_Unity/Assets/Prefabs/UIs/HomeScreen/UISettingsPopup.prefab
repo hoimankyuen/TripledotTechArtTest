@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 1215762000256220822}
   - component: {fileID: 953474159813461244}
   - component: {fileID: 4363795258060971427}
+  - component: {fileID: 8762116138416136041}
   - component: {fileID: 7165955167943228212}
   m_Layer: 5
   m_Name: BackButton
@@ -333,6 +334,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8762116138416136041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7896022412683595402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec051a6079bf0824cb400094b9923474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISimpleButtonClickAnimation
+  sizeChange: 0.1
+  duration: 0.2
 --- !u!114 &7165955167943228212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,8 +1733,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2047935196274712730, guid: 64d0d52471d98814691f30ce11a14327, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 2355593526008946102}
   m_SourcePrefab: {fileID: 100100000, guid: 64d0d52471d98814691f30ce11a14327, type: 3}
+--- !u!1 &3493226638377164734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2047935196274712730, guid: 64d0d52471d98814691f30ce11a14327, type: 3}
+  m_PrefabInstance: {fileID: 3175553594218676004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2355593526008946102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3493226638377164734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec051a6079bf0824cb400094b9923474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISimpleButtonClickAnimation
+  sizeChange: 0.1
+  duration: 0.2
 --- !u!224 &7160291961621844633 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5714965334861049277, guid: 64d0d52471d98814691f30ce11a14327, type: 3}

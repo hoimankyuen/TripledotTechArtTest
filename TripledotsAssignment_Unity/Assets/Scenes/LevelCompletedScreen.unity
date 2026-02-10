@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -545,6 +545,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3081107587637026138}
+  - {fileID: 842587512}
   m_Father: {fileID: 224222501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5542,13 +5543,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842587511}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 110599732}
-  m_Father: {fileID: 3081107587637026138}
+  m_Father: {fileID: 451716407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -15400,7 +15401,7 @@ GameObject:
   - component: {fileID: 1064964208}
   - component: {fileID: 1064964207}
   m_Layer: 5
-  m_Name: ConIcon
+  m_Name: CoinIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17146,9 +17147,6 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 498453569206406808, guid: 94d54b18294db2547b72c9d46fda5b54, type: 3}
       insertIndex: 0
-      addedObject: {fileID: 842587512}
-    - targetCorrespondingSourceObject: {fileID: 498453569206406808, guid: 94d54b18294db2547b72c9d46fda5b54, type: 3}
-      insertIndex: 1
       addedObject: {fileID: 1064964206}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d54b18294db2547b72c9d46fda5b54, type: 3}

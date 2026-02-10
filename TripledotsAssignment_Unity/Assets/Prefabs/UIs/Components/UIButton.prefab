@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3198847497953814587}
   - component: {fileID: 801520841257406916}
+  - component: {fileID: 4402708816082057591}
   - component: {fileID: 7487614307694062051}
   - component: {fileID: 4172078468300257972}
   - component: {fileID: 6326446193607298844}
@@ -85,6 +86,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4402708816082057591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428886788896761707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec051a6079bf0824cb400094b9923474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISimpleButtonClickAnimation
+  size: 0.1
+  duration: 0.2
 --- !u!222 &7487614307694062051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -178,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932348602151191189, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_fontSize
-      value: 207.25
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 932348602151191189, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_fontAsset
@@ -318,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4016594270989037486, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_fontSize
-      value: 207.25
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 4016594270989037486, guid: 79b609c0f5a1847479fbf576e1cecab2, type: 3}
       propertyPath: m_fontAsset
