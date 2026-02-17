@@ -7,6 +7,7 @@ public class UISafeAreaContainer : MonoBehaviour
     private RectTransform _rectTransform;
     
     private ScreenOrientation _lastOrientation;
+    private Vector2 _lastScreenSize;
 
     private void Awake()
     {
@@ -25,7 +26,9 @@ public class UISafeAreaContainer : MonoBehaviour
 
     private void Update()
     {
-        if (Screen.orientation == _lastOrientation)
+        // note: checking for screen size for detecting editor window resizing only, should be safe removing in production
+        if (Screen.orientation == _lastOrientation && 
+            Mathf.Approximately(Vector2.SqrMagnitude(_lastScreenSize - new Vector2(Screen.width, Screen.height)), 0f))
             return;
         
         RefreshSafeArea();
@@ -34,15 +37,16 @@ public class UISafeAreaContainer : MonoBehaviour
     private void RefreshSafeArea()
     {
         Rect safeArea = Screen.safeArea;
-        Resolution resolution = Screen.currentResolution;
+        Vector2 screenSize = new Vector2(Screen.width, Screen.height);
         float scaleFactor = _canvas != null ? 1f / _canvas.transform.localScale.x : 1.0f;
         
-        Vector2 newSizeDelta = new Vector2(safeArea.width - resolution.width, safeArea.height - resolution.height);
+        Vector2 newSizeDelta = new Vector2(safeArea.width - screenSize.x, safeArea.height - screenSize.y);
         Vector2 newAnchoredPosition = new Vector2(newSizeDelta.x / 2f + safeArea.x, newSizeDelta.y / 2f + safeArea.y);
 
         _rectTransform.sizeDelta = newSizeDelta * scaleFactor;
         _rectTransform.anchoredPosition = newAnchoredPosition * scaleFactor;
         
         _lastOrientation = Screen.orientation;
+        _lastScreenSize = screenSize;
     }
 }
